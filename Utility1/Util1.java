@@ -27,13 +27,22 @@ public class Util1
 	
 	/*TempConversion Method*/
 	
-	public static void temperatureConversion(int c1)
-	{
-		int F=(c1*9/5)+32; //conversion from cel to fehr
-		int C=(F-32)*5/9;  //conversion from fehr to cel
-		System.out.println("f--> "+F);
-		System.out.println("c--> "+C);
-	}
+	
+		public static void fahreToCel()
+		{ 
+				System.out.println("enter c value ");
+				int c=scan.nextInt();
+				int F=(c*9/5)+32; //conversion from cel to fehr
+				System.out.println("f--> "+F);
+		}
+		public static void celToFahre()
+		{
+				System.out.println("enter f value ");
+				int f=scan.nextInt();
+				int C=(f-32)*5/9;  //conversion from fehr to cel
+				System.out.println("c--> "+C);		
+		}
+	
 	
 	/*BubbleSort method*/
 	
