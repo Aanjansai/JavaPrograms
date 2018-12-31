@@ -42,7 +42,8 @@ public class Util1
 				int C=(f-32)*5/9;  //conversion from fehr to cel
 				System.out.println("c--> "+C);		
 		}
-	
+		
+	/* end of tempconversion */
 	
 	/*BubbleSort method*/
 	
@@ -71,6 +72,7 @@ public class Util1
 		}
 		
 	}
+	/* end of bubblesort */
 	
 	/*InsertionSort method*/
 	
@@ -98,7 +100,79 @@ public class Util1
 	        }        
 
 	    }    
-
-
-
+	  /* end of insertion */
+	  
+	/* method for DayOfWeek */
+	  
+	  public static int dayOfWeek(int day,int month,int year)
+		{
+			
+		if((month>=1 && month<=12) && (day>=0 && day<=31))
+			{
+			// formula of Gregorian calendar
+			
+				int y=year-(14-month)/12;         
+				int x=y+y/4-y/100+y/400;
+				int m=month+12*((14-month)/12)-2;
+				int d=(day+x+31*m/12)%7;
+				System.out.println("day of week "+d);
+				switch(d)
+				{
+					case 0: System.out.println(d+" sunday ");
+					        break;
+					case 1: System.out.println(d+" monday ");
+			        		break;
+					case 2: System.out.println(d+" tuesday ");
+			        		break;
+					case 3: System.out.println(d+" wednesday ");
+			        		break;
+					case 4: System.out.println(d+" thursday ");
+			        		break;
+					case 5: System.out.println(d+" friday ");
+			        		break;
+					case 6: System.out.println(d+" saturday ");
+			        		break;
+				}
+				
+				
+			}
+		else
+			{
+				System.out.println("enter valid date ");
+			}
+			return 0;
+		}
+	  /* end of dayofweek */
+	  
+	/* method for monthlyPayment */  
+	  public static double monthlyPayment(double year,double principal,double rate)
+		{
+			double payment;
+			double n=12*year;
+			double r=rate/(12*100);
+			double num=(principal*r);
+			double deno=(1-(Math.pow(1+r,-n)));
+			payment=(num/deno);
+			System.out.println("monthly payment "+payment);
+			return 0.0;
+		}
+	  /* end of monthlypayment method */
+	
+	  /* netwon method */
+	  
+	  public static double sqrt(double c)
+		{
+			double t=c;
+			double eps= (1e-15);
+			while(Math.abs(t-c/t)>eps*t)
+			{
+				t=(c/t+t)/2.0;
+				
+			}		
+			
+		System.out.println("average of t = "+t);
+		return 0.0;
+		}
+	  /* end of newton method */
+	
 }
