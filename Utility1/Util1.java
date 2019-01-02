@@ -1,4 +1,5 @@
 package Utility1;
+import java.util.Arrays;
 import java.util.Scanner;
 public class Util1 
 {
@@ -175,4 +176,56 @@ public class Util1
 		}
 	  /* end of newton method */
 	
+	  /* method for Decimal to binary conversion */
+	  public static int decToBin(int n)
+		{
+		int a;
+		String x=""; 
+		for(int i=1;i<=n;i++)
+		{
+			while(n>0)
+			{
+				a=n%2;
+				x=a+""+x;
+				n=n/2;
+				System.out.println("n= "+n);
+				
+			}
+		
+		}
+		
+			System.out.println("binary value--> "+x);
+			return 1;
+		}
+	  /* end of method */
+	  
+	  /* Anagram method */
+	  public static Object anagramMeth(String s1,String s2)
+		{
+		  String s3=s1.replaceAll("\\s", "");
+		  String s4=s2.replaceAll("\\s", "");
+		  boolean status=true;
+		  if(s3.length()==s4.length())
+		  	{
+			  char[] s3Array=s3.toLowerCase().toCharArray();//converts to lower case and to character array
+			  char[] s4Array=s4.toLowerCase().toCharArray();
+			  Arrays.sort(s3Array); //sorting s3 array
+			  Arrays.sort(s4Array); //sorting s4 array
+			  status=Arrays.equals(s3Array,s4Array);
+		  	}
+		  else
+		  	{
+			  status =false;
+		  	}
+		  if(status)
+		  	{
+			  System.out.println("string "+s1+" string "+s2+" are anagram");
+		  	}
+		  else
+		  	{
+			  System.out.println("strings are not anagram ");
+		  	}
+		  	return status;
+		}	
+	  /* end of anagram method */
 }
