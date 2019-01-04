@@ -221,7 +221,7 @@ public class Util1
 		  	{
 			  System.out.println("string "+s1+" string "+s2+" are anagram");
 		  	}
-		  else
+		  else 
 		  	{
 			  System.out.println("strings are not anagram ");
 		  	}
@@ -230,7 +230,7 @@ public class Util1
 	  /* end of anagram method */
 	  
 	  /* sum of triplets */
-	  public static int threeIntegers(int[] arr)
+	  public static int threeIntegers(int[] arr) //method to distint triplets
 		{
 			boolean found=true;
 			for(int i=0;i<arr.length-2;i++)

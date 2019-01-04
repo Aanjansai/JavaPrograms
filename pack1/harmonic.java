@@ -21,7 +21,7 @@ public class harmonic
 				sum=sum+(1/i);//logic for Harmonic number
 			
 			}
-			System.out.println(sum);
+			System.out.println("harmonic value of a number is "+sum);
 		}
 		
 		

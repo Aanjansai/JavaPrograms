@@ -1,6 +1,6 @@
 package pack1;
 import Utility1.Util1;
-public class RamdomNumber
+public  class RandomNumber
 {
 
 	public static void main(String[] args) 
